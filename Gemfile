@@ -55,14 +55,14 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 # Icons
-gem 'font-awesome-sass'
 gem 'font-awesome-rails'
+gem 'font-awesome-sass'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
-  gem 'rspec-rails'
-  gem 'rails-controller-testing'
   gem 'faker'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -78,6 +78,6 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
-  gem 'webdrivers'
   gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
