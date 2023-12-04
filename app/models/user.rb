@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :entities
   has_many :groups
   attr_accessor :confirmation_sent_at
+
   after_create :skip_confirmation!
 
   validates :name, presence: true
@@ -17,5 +18,5 @@ class User < ApplicationRecord
 
   def admin?
     role == 'admin'
-  end 
+  end
 end
