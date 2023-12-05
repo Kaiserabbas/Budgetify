@@ -1,6 +1,6 @@
 class EntitiesController < ApplicationController
-    before_action :authenticate_user!
-
+    before_action :authenticate_user!   
+    before_action :set_group, only: [:index, :new, :create, :edit, :update, :destroy]
     def index
         @entities = @group.entities
         @group = Group.find(params[:group_id])
@@ -8,19 +8,17 @@ class EntitiesController < ApplicationController
 
     def new
         @entity = @group.entities.new
-        @group = current_user.groups
+        @groups = Group.all
     end
 
     def create
-        @entity = current_user.entities.new(entity_params)
-        @group = current_user.groups
+    @entity = current_user.entities.new(entity_params)
 
-        @entity.user = current_user
-        if @entity.save
-            redirect_to group_entity_path (@group), notice: 'Entity was successfully created.'
-        else
-            render :new, notice: 'Entity was not created.'
-        end
+    if @entity.save
+        redirect_to group_entities_path(@entity.group), notice: 'Entity was successfully created.'
+    else
+        render :new, notice: 'Entity was not created.'
+    end
     end
 
     def edit
@@ -32,7 +30,7 @@ class EntitiesController < ApplicationController
         @entity = @group.entities.find(params[:id])
     
         if @entity.update(entity_params)
-            redirect_to group_entity_path (@group), notice: 'Entity was successfully updated.'
+            redirect_to group_entities_path(@group), notice: 'Entity was successfully updated.'
         else
             render :edit, notice: 'Entity was not updated.'
         end
