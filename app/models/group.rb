@@ -5,6 +5,6 @@ class Group < ApplicationRecord
   validates :name, presence: true
 
   def total_amount
-    self.entities.sum(:amount) 
+    entities.sum(:amount)
   end
 end
