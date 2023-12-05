@@ -3,9 +3,8 @@ class Group < ApplicationRecord
   has_many :entities, dependent: :destroy
 
   validates :name, presence: true
-  validates :icon, presence: true
 
-  def total
-    entities.sum(:amount)
+  def total_amount
+    self.entities.sum(:amount) 
   end
 end
