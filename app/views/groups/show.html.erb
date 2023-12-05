@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div>
+    <%= link_to "<", groups_path %>
+  </div>
+
+  <h2>PAYMENTS</h2>
+
+  <div>
+    <h3><%= @group.name %></h3>
+    <p>$<%= @sum %></p>
+  </div>
+
+  <div>
+    <% @entities.each do |entity| %>
+      <div>
+        <p><%= entity.name %></p>
+        <p>$<%= entity.amount %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+<%= link_to "ADD A NEW TRANSACTION", new_group_entity_path(@group) %>
+
+  </div>
+</div>
