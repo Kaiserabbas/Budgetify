@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
-  before_action :load_font_awesome_icons, only: %i[new create]
+  before_action :load_font_awesome_icons, only: [:new, :create]
 
   def index
     @groups = current_user.groups
@@ -35,12 +35,11 @@ class GroupsController < ApplicationController
   end
 
   def load_font_awesome_icons
-    @icons = %w[
-      fa-user fa-envelope fa-flag fa-address-book fa-bell fa-camera fa-heart fa-envelope fa-star fa-user
-      fa-thumbs-up fa-check-circle fa-cog fa-globe fa-music fa-plane fa-shopping-cart fa-truck fa-briefcase
-      fa-coffee fa-gamepad fa-lightbulb fa-leaf fa-paw fa-umbrella fa-building fa-gavel fa-key fa-lock fa-map
-      fa-anchor fa-bicycle fa-graduation-cap fa-medkit fa-shield fa-suitcase fa-trophy fa-truck fa-car fa-bus
-      fa-train fa-battery-full fa-battery-half fa-battery-quarter fa-battery-empty fa-battery-three-quarters
+    @icons = [
+        'fa-user', 'fa-envelope', 'fa-flag', 'fa-address-book', 'fa-bell',
+  'fa-heart', 'fa-camera', 'fa-globe', 'fa-cloud', 'fa-briefcase',
+  'fa-star', 'fa-rocket', 'fa-music', 'fa-book', 'fa-coffee',
+  'fa-lightbulb', 'fa-umbrella', 'fa-plane', 'fa-smile', 'fa-sun'
     ]
-  end
+  end  
 end
