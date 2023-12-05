@@ -3,8 +3,10 @@
   <%= f.text_field :name %>
 
   <!-- Icon selection -->
-  <%= f.label :icon, "Select Icon:" %>
-  <%= f.select :icon, @icons.map { |icon| [icon, icon] }, {}, { class: "form-control" } %>
+    <%= f.label :icon, "Select Icon" %>
+  <!-- <%= f.select :icon, @icons.map { |icon| [icon, icon] }, {}, { class: "form-control" } %> -->
+    <%= f.select :icon, @icons.map { |icon| ["#{icon}", icon] }, {}, class: 'selectpicker' %>
 
+    <%= f.label :icon, "Select Icon" %>
   <%= f.submit "Create Group" %>
 <% end %>
