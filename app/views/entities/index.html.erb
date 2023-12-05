@@ -1,0 +1,36 @@
+<h1>Category Summary</h1>
+<%= render 'navigation/navigation', back_link: group_path(@group), title: "PAYMENTS" %>
+<div>
+  <%= content_tag :i, "", class: "fa #{@group.icon}" %>
+  
+  </div>  
+    <div>
+      <%= @group.name %>
+    </div>
+  </div>
+  <div>
+    <div>
+      <%= @group.user.name %>
+    </div>
+  </div>
+  <div>
+    Total amount $ <%= @group.entities.sum(:amount) %>
+  </div>
+</div>
+<div>
+  <% @entities.order(created_at: :desc).each do |entity| %>
+  <div>
+    <%= entity.name %>
+  </div>
+  <div>
+    $ <%= entity.amount %>
+  </div>
+  <div>
+      <%= link_to 'Edit', edit_group_entity_path(@group, entity) %>
+  </div>
+  <% end %>
+</div>
+
+<div>
+    <%= link_to 'ADD TRANSACTION', new_group_entity_path(@group),  class: "add-link" %>
+</div>
