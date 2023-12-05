@@ -1,0 +1,10 @@
+<%= form_for @group do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <!-- Icon selection -->
+  <%= f.label :icon, "Select Icon:" %>
+  <%= f.select :icon, @icons.map { |icon| [icon, icon] }, {}, { class: "form-control" } %>
+
+  <%= f.submit "Create Group" %>
+<% end %>
