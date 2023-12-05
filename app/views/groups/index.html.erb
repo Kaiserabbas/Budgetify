@@ -5,7 +5,8 @@
     <div class="group-item">
       <%= link_to group_entities_path(group) do %>
         <div class="group-content">
-          <%= content_tag :i, "", class: "fa #{group.icon}" %>
+       <!--   <%= content_tag :i, "", class: "fa #{group.icon}" %>  -->
+    <%= content_tag :i, "", class: "fa #{group.icon}" %>
           <p><%= group.name %></p>
           <p>$ <%= group.total_amount %></p>
         </div>
