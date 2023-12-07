@@ -1,12 +1,16 @@
-<%= form_for @group do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <!-- Icon selection -->
+<h3>Add a payment group </h3>
+<div>
+<%= form_for @group, html: { class: "item-form" } do |f| %>
+   <div class="field">    
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+   <div class="field">
     <%= f.label :icon, "Select Icon" %>
-  <!-- <%= f.select :icon, @icons.map { |icon| [icon, icon] }, {}, { class: "form-control" } %> -->
     <%= f.select :icon, @icons.map { |icon| ["#{icon}", icon] }, {}, class: 'selectpicker' %>
-
-    <%= f.label :icon, "Select Icon" %>
-  <%= f.submit "Create Group" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create Group" %>
+  </div>
 <% end %>
+</div>
