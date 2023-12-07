@@ -1,6 +1,11 @@
-<div>
-  <h1>BUDGETIFY</h1>
-  <div>
-    <img src="<%= image_path('') %>" alt="image">
+<%= stylesheet_link_tag 'welcome' %>
+
+<div class="welcome">
+  <div class="logo">
+    <img src="<%= image_path('logo.png') %>" alt="image">
+  </div>
+  <div class="welcome-buttons">
+    <a href="<%= new_user_session_path %>" class="login-button">Login</a>
+    <a href="<%= new_user_registration_path %>" class="signup-button">Sign Up</a>
   </div>
 </div>
