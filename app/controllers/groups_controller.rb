@@ -39,7 +39,9 @@ class GroupsController < ApplicationController
       fa-user fa-envelope fa-flag fa-address-book fa-bell
       fa-heart fa-camera fa-globe fa-cloud fa-briefcase
       fa-star fa-rocket fa-music fa-book fa-coffee
-      fa-lightbulb fa-umbrella fa-plane fa-smile fa-sun
+      fa-lightbulb fa-umbrella fa-plane fa-smile fa-sun 
+      fa-leaf fa-star-o fa-star-half-o fa-star-half-empty
+      fa-star-half-full
     ]
   end
 end
