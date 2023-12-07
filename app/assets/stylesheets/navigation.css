@@ -16,7 +16,7 @@
   color: #fff;
   padding: 20px;
   transition: left 0.3s ease-in-out;
-  backdrop-filter: blur(5px);
+  filter: blur(5px);
   background-image: linear-gradient(to right, rgba(62, 130, 145, 0.9), rgba(55, 120, 194, 0.9));
 }
 
