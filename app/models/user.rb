@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
   has_many :entities
   has_many :groups
-  attr_accessor :confirmation_sent_at
+  attr_accessor :confirmation_sent_at, :name
 
   after_create :skip_confirmation!
 
