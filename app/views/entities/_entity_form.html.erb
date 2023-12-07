@@ -1,21 +1,21 @@
-<div>
+    <div class="form">
   <%= form_with(model: [@group, @entity], url: group_entities_path(@group), local: true, method: :post, html: { class: "item-form" }) do |form| %>
-    <div>
+    <div class="field">
       <%= form.label :name %>
       <%= form.text_field :name, placeholder: "Enter name", required: true %>
     </div>
     <br>
-    <div>
+    <div class="field">
       <%= form.label :amount %>
       <%= form.number_field :amount, placeholder: "Enter amount", required: true %>
     </div>
     <br>
-    <div>
+    <div class="field">
       <%= form.label :group_id, "Select Groups" %>
       <%= form.select :group_id, options_for_select(@groups.map { |group| [group.name, group.id] }, @entity.group_id), { class: "browser-default" } %>
     </div>
     <br>
-    <div>
+    <div class="actions">
       <%= form.submit "Create Item" %>
     </div>
   <% end %>
