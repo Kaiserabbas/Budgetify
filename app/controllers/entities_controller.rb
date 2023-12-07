@@ -6,6 +6,11 @@ class EntitiesController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 
+  def show
+    @group = Group.find(params[:group_id])
+    @entity = @group.entities.find(params[:id])
+  end
+
   def new
     @entity = @group.entities.new
     @groups = Group.all
@@ -36,11 +41,17 @@ class EntitiesController < ApplicationController
     end
   end
 
-  def destroy
-    @entity = current_user.entities.find(params[:id])
-    @entity.destroy
-    redirect_to entity_path, notice: 'Entity was successfully destroyed.'
+def destroy
+  @entity = @group.entities.find(params[:id])
+  if @entity.destroy
+    redirect_to group_entities_path(@group), notice: 'Entity was successfully destroyed.'
+  else
+    redirect_to group_entities_path(@group), alert: 'Entity could not be destroyed.'
   end
+end
+
+
+
 
   private
 
