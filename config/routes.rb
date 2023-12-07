@@ -14,9 +14,10 @@ Rails.application.routes.draw do
       root :to => "welcome#home", as: :unauthenticated_root
     end
   end
+  delete '/groups/:group_id/entities/:id', to: 'entities#destroy', as: 'group_entity'
 
   resources :groups, only: [:index, :new, :create, :show] do
-    resources :entities, only: [:index, :new, :create, :destroy, :edit, :update]
+    resources :entities, only: [:index, :new, :create, :destroy, :edit, :update, :show]
   end
 
   # Defines the root path route ("/")
