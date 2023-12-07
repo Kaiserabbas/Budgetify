@@ -3,11 +3,11 @@
 <%= render 'navigation/navigation', title: "Groups", back_link: groups_path %>
 
 <div>
-  <h3>TOTAL PAYMENT FOR  "<%= @group.name.upcase  %>"</h2>
+  <h4>TOTAL PAYMENT FOR  "<%= @group.name.upcase  %>"</h4>
   <div class="group-content">   
     <%= content_tag :i, "", class: "fa #{@group.icon}" %>
-    <h3><%= @group.name %></h3>
-    <p>$<%= @sum %></p>
+    <h4><%= @group.name %></h4>
+    <h5>$<%= @sum %></h5>
   </div>
 <div>
 <div class="new-group">
