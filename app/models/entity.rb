@@ -1,8 +1,9 @@
 class Entity < ApplicationRecord
   belongs_to :user
   belongs_to :group
-  has_many :groups
 
   validates :name, presence: true
   validates :amount, presence: true, numericality: { greater_than_or_equal_to: 0 }
+  validates :group, presence: true
+
 end
