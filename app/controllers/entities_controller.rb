@@ -41,14 +41,14 @@ class EntitiesController < ApplicationController
     end
   end
 
-def destroy
-  @entity = @group.entities.find(params[:id])
-  if @entity.destroy
-    redirect_to group_entities_path(@group), notice: 'Entity was successfully destroyed.'
-  else
-    redirect_to group_entities_path(@group), alert: 'Entity could not be destroyed.'
+  def destroy
+    @entity = @group.entities.find(params[:id])
+    if @entity.destroy
+      redirect_to group_entities_path(@group), notice: 'Entity was successfully destroyed.'
+    else
+      redirect_to group_entities_path(@group), alert: 'Entity could not be destroyed.'
+    end
   end
-end
 
 
 
