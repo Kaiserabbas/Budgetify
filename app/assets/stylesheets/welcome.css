@@ -1,48 +1,47 @@
 body {
-    background-color: #000;
+  background-color: #000;
 }
 
 .welcome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 img {
-    width: 150px;
+  width: 150px;
 }
 
 .welcome-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+  flex-direction: column;
 }
 
 .welcome-buttons a {
-    width: 200px;
-    color: #000;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 20px;
-    padding: 5px 30px;
-
+  width: 200px;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 5px 30px;
 }
 
 .login-button {
-    background-color: #5fb523;
+  background-color: #5fb523;
 }
 
 .signup-button {
-    background-color: #3778c2
+  background-color: #3778c2;
 }
