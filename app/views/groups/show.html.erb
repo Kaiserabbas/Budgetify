@@ -1,27 +1,15 @@
-<div class="container">
+<%= stylesheet_link_tag 'groups' %>
 
-  <div>
-  <%= content_tag :i, "", class: "fa #{@group.icon}" %>
-  </div>
+<%= render 'navigation/navigation', title: "Groups", back_link: groups_path %>
 
-  <h2>PAYMENTS</h2>
-
-  <div>
+<div>
+  <h3>TOTAL PAYMENT FOR  "<%= @group.name.upcase  %>"</h2>
+  <div class="group-content">   
+    <%= content_tag :i, "", class: "fa #{@group.icon}" %>
     <h3><%= @group.name %></h3>
     <p>$<%= @sum %></p>
   </div>
-
-  <div>
-    <% @entities.each do |entity| %>
-      <div>
-        <p><%= entity.name %></p>
-        <p>$<%= entity.amount %></p>
-      </div>
-    <% end %>
-  </div>
-
-  <div>
-<%= link_to "ADD A NEW TRANSACTION", new_group_entity_path(@group) %>
-
-  </div>
+<div>
+<div class="new-group">
+  <%= link_to "ADD A NEW GROUP", new_group_path(@group)  %>
 </div>
