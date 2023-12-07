@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe GroupsController, type: :controller do
-    include Devise::Test::ControllerHelpers
+  include Devise::Test::ControllerHelpers
   let(:user) { User.create!(name: 'John', email: 'nHqFP@example.com', password: 'password') }
-  let(:group) { Group.create!(name: 'Travel', icon: 'fa-plane', user: user) }
+  let(:group) { Group.create!(name: 'Travel', icon: 'fa-plane', user:) }
   before do
     sign_in user
   end
@@ -34,35 +34,35 @@ RSpec.describe GroupsController, type: :controller do
 
   describe 'POST #create' do
     context 'with valid attributes' do
-        let(:valid_attributes) { { name: 'Test Group', icon: 'fa-user' } } # replace with your valid attributes
+      let(:valid_attributes) { { name: 'Test Group', icon: 'fa-user' } } # replace with your valid attributes
 
-        it 'creates a new group' do
-        expect {
-            post :create, params: { group: valid_attributes }
-        }.to change(Group, :count).by(1)
-        end
+      it 'creates a new group' do
+        expect do
+          post :create, params: { group: valid_attributes }
+        end.to change(Group, :count).by(1)
+      end
 
-        it 'redirects to the groups#index' do
+      it 'redirects to the groups#index' do
         post :create, params: { group: valid_attributes }
         expect(response).to redirect_to groups_path
-        end
+      end
     end
 
     context 'with invalid attributes' do
-        let(:invalid_attributes) { { name: nil, icon: 'fa-user' } } # replace with your invalid attributes
+      let(:invalid_attributes) { { name: nil, icon: 'fa-user' } } # replace with your invalid attributes
 
-        it 'does not save the new group' do
-        expect {
-            post :create, params: { group: invalid_attributes }
-        }.to_not change(Group, :count)
-        end
+      it 'does not save the new group' do
+        expect do
+          post :create, params: { group: invalid_attributes }
+        end.to_not change(Group, :count)
+      end
 
-        it 're-renders the new template' do
+      it 're-renders the new template' do
         post :create, params: { group: invalid_attributes }
         expect(response).to render_template :new
-        end
+      end
     end
-    end
+  end
 
   describe 'GET #show' do
     it 'assigns the requested group to @group' do
