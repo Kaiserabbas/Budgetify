@@ -50,9 +50,6 @@ class EntitiesController < ApplicationController
     end
   end
 
-
-
-
   private
 
   def entity_params
