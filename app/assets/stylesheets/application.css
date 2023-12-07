@@ -10,17 +10,130 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #f4f4f4;
   color: #333;
-  line-height: 1.6;
   margin: 0 auto;
-  padding: 20px;
+  font-size: 14px;
 }
 
 h1 {
   font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
+}
+
+h2,
+h3,
+h4 {
+  text-align: center;
 }
 
 p {
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 0 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+
+.field input {
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.actions input {
+  background-color: #3778c2;
+  color: #fff;
+  min-width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  margin-top: 50px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.icon-container span {
+  background-color: #3778c2;
+  color: #fff;
+  min-width: 25px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+}
+
+.icon-container input {
+  background-color: #3778c2;
+  color: #fff;
+  min-width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.field.remember {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field.remember label {
+  white-space: nowrap;
+  margin: 0;
+}
+
+i {
+  color: #5fb523;
+}
+
+.button {
+  background-color: #5fb523;
+  color: #fff;
+  min-width: 50px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
 }
