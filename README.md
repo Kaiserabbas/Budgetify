@@ -117,8 +117,8 @@ Kindly give this project a star if you like it.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-I would like to thank Microverse.
+"I would like to extend our heartfelt appreciation to Gregoire Vella for the original design idea that inspired this project. His innovative work, showcased on Behance, served as the guiding light for our creative endeavor. We honor and respect the Creative Commons license by giving due credit to the remarkable vision and ingenuity of Gregoire Vella."
+I would also like to thank Microverse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
