@@ -1,3 +1,5 @@
+    <%= render 'navigation/navigation', back_link:  group_entities_path(@group), title: "Create Entity" %>
+
     <div class="form">
   <%= form_with(model: [@group, @entity], url: group_entities_path(@group), local: true, method: :post, html: { class: "item-form" }) do |form| %>
     <div class="field">
