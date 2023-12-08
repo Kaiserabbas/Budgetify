@@ -42,7 +42,7 @@ RSpec.describe 'groups/index', type: :view do
         end
       end
       assert_select 'div.new-group' do
-        assert_select 'a[href=?]', new_group_path, text: 'ADD NEW CATEGORY'
+        assert_select 'a[href=?]', new_group_path, text: 'ADD NEW GROUP'
       end
     end
   end
