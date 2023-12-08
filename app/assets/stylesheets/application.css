@@ -124,7 +124,8 @@ p {
 }
 
 i {
-  color: #5fb523;
+  color: #444;
+  font-size: 24px;
 }
 
 .button {

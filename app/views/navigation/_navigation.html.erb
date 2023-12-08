@@ -13,7 +13,7 @@
   <h1><%= title.upcase %></h1>
   <% if user_signed_in? %>
     <%= button_to destroy_user_session_path, method: :delete, class: "icon text-end logout-btn" do %>
-      <i class="fa fa-user"></i> Logout
+      <i class="fa fa-user-circle"></i> Logout
     <% end %>
     
   <% elsif controller_name != 'sessions' %>

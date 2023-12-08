@@ -36,7 +36,7 @@ class GroupsController < ApplicationController
 
   def load_font_awesome_icons
     @icons = %w[
-      fa-user fa-envelope fa-flag fa-address-book fa-bell
+      fa-user-tie fa-user-circle fa-envelope fa-flag fa-address-book fa-bell
       fa-heart fa-camera fa-globe fa-cloud fa-briefcase
       fa-star fa-rocket fa-music fa-book fa-coffee
       fa-lightbulb fa-umbrella fa-plane fa-smile fa-sun
