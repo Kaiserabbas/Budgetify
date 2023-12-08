@@ -3,6 +3,7 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+  - [🎙️ Project Description](#project-description)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -10,6 +11,7 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
+  - [Run server](#run-server)
   - [Run tests](#run-tests)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -21,7 +23,8 @@
 # 🪙🪙🪙  BUDGETIFY <a name="about-project"></a>
 
 **BUDGETIFY** is a robust Ruby on Rails application designed to simplify your culinary experience on managing bidget. The Ruby on Rails capstone project is about building a mobile web application where you can have a list of transactions associated with a category, so that you can see how much money you spent and on what.
-
+## 🎙️Project Description<a name="project-description"></a>
+[Project Video Description](https://www.loom.com/share/eec35034aa3545fd9c00e549b5f2dc9f?sid=e47fd009-da30-4f80-b215-18e5c0a11f6d)
 ## 🛠 Built With <a name="built-with"></a>
 Ruby on Rails, Visual Studia Code, WSL
 
@@ -60,7 +63,7 @@ bundle install
 rails db:migrate
 ```
 
-### Run server <a name="run tests"></a>
+### Run server <a name="run-server"></a>
 ```
 rails server
 ```
@@ -74,7 +77,7 @@ user = User.find_by(email: 'example@example.com')
 user.update_columns(confirmed_at: Time.current)
 ```
 
-### Run tests <a name="run tests"></a>
+### Run tests <a name="run-tests"></a>
 
 To test, run:
 
