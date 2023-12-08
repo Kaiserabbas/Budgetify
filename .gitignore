@@ -35,3 +35,5 @@
 /config/master.key
 # Add node_modules
 /node_modules
+
+/config/credentials/production.key
