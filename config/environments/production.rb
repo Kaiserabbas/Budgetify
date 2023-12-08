@@ -94,4 +94,8 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  secret_key_base = ENV.fetch("SECRET_KEY_BASE") { Rails.application.secrets.secret_key_base }
+  config.secret_key_base = secret_key_base if secret_key_base
+
+  config.action_mailer.default_url_options = { host: 'budgetify.railway.app', protocol: 'https' }
 end
