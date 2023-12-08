@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag 'groups' %>
+
+<%= render 'navigation/navigation', title: "Groups", back_link: @group_entities_path  %> 
+
+<div class="group-list">
+  <% @groups.each do |group| %>
+    <div class="group-item">
+        <div class="group-content">
+          <%= content_tag :i, "", class: "fa #{group.icon}" %>
+          <%= link_to group_entities_path(group) do %>
+          <p><%= group.name %></p>
+          <% end %>
+          <p>$ <%= group.total_amount %></p>
+          <%= link_to group_path(group) do %>
+          <p>show</p>
+          <% end %>
+        </div>
+   </div>
+  <% end %>
+  <div class="new-group">
+    <%= link_to 'ADD NEW GROUP', new_group_path %>
+  </div>
+</div>

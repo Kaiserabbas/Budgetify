@@ -1,0 +1,33 @@
+<%= stylesheet_link_tag 'groups' %>
+
+<h4> <%= @group.name %> Payments Summary</h4>
+<%= render 'navigation/navigation', back_link: groups_path, title: "PAYMENTS" %>
+ <p><span class="group-name"><%= @group.user.name %>'s</span> Total Spendings on <%= @group.name %> <p>
+
+<div class="group-name">
+  <%= content_tag :i, "", class: "fa #{@group.icon}" %>
+  <%= @group.name %>
+  <p class="total-amount"> Total amount $ <%= @group.entities.sum(:amount) %> </p>
+</div>
+
+<div>
+  <% @entities.order(created_at: :desc).each do |entity| %>
+    <div class="group-content">
+      <div>
+        <p><%= entity.name %></p>
+      </div>
+      <div>
+        <p>$<%= entity.amount %></p>
+      </div>
+      <div class="modify-buttons">
+        <%= link_to 'Edit', edit_group_entity_path(@group, entity), class: "button" %>
+        <%= button_to 'Delete', group_entity_path(@group, entity.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "button delete"%>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<div class="new-group">
+    <%= link_to 'ADD TRANSACTION', new_group_entity_path(@group)%>
+</div>

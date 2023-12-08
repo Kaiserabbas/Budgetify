@@ -1,0 +1,18 @@
+<%= render 'navigation/navigation', title: "Groups", back_link: groups_path %>
+
+<h3>Add a payment group </h3>
+<div>
+<%= form_for @group do |f| %>
+   <div class="field">    
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+   <div class="field">
+    <%= f.label :icon, "Select Icon" %>
+    <%= f.select :icon, @icons.map { |icon| ["#{icon}", icon] }, {}, class: 'selectpicker' %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create Group" %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,17 @@
+<h3>Update Payment Detail </h3>
+<div>
+<%= form_with(model: [@group, @entity], url: group_entity_path(@group, @entity), local: true, method: :patch) do |f| %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+  </div>
+   <div class="field">
+      <%= f.label :amount %>
+      <%= f.number_field :amount %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
+<%= link_to 'Back', group_entities_path %>
