@@ -24,6 +24,9 @@ development:
   database: budgetify
   username: postgres
   password: meeram
+  host: localhost
+  port: 5432
+  
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -83,6 +86,4 @@ test:
 #
 production:
   <<: *default
-  database: budgetify
-  username: postgres
-  password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
