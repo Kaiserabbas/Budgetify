@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'groups' %>
 
-<%= render 'navigation/navigation', title: "Groups", back_link: false %>
+<%= render 'navigation/navigation', title: "Groups", back_link: @group_entities_path  %> 
 
 <div class="group-list">
   <% @groups.each do |group| %>

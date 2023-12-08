@@ -24,7 +24,7 @@
 
 **BUDGETIFY** is a robust Ruby on Rails application designed to simplify your culinary experience on managing bidget. The Ruby on Rails capstone project is about building a mobile web application where you can have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 ## 🎙️Project Description<a name="project-description"></a>
-[Project Video Description](https://www.loom.com/share/eec35034aa3545fd9c00e549b5f2dc9f?sid=e47fd009-da30-4f80-b215-18e5c0a11f6d)
+[Project Video Description](https://www.loom.com/share/cf02f39c3b424fb7b751c88638f384d4?sid=fb87e1c8-ae16-4a5a-a7c9-54c8e15669c8)
 ## 🛠 Built With <a name="built-with"></a>
 Ruby on Rails, Visual Studia Code, WSL
 
